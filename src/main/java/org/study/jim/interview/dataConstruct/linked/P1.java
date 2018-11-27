@@ -21,6 +21,18 @@ public class P1 {
         }
         return pre;
     }
+    static ListNode reverse2(ListNode head){
+        ListNode pre = null;
+        ListNode next = null;
+        while (head!=null){
+            next = head.next;
+            head.next = pre;
+            pre = head;
+            //head 为下一个节点继续循环
+            head = next;
+        }
+        return pre;
+    }
     /**
      * 链表取中间值，按照快索引的步长为慢索引的步长的两倍来取值处理
      * @param headNode

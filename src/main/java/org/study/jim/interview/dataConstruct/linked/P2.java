@@ -1,10 +1,7 @@
 package org.study.jim.interview.dataConstruct.linked;
 /**
  * @Auther: jim
- * @Date: 2018/11{
- *
- *         return null;
- *     }/25 16:15
+ * @Date: 2018/11/25 16:15
  */
 public class P2 {
     /**
@@ -46,15 +43,26 @@ public class P2 {
         }
         //设置小值为头节点
         ListNode head = head1.value< head2.value ? head1: head2;
+        //变量cur1 为 head1
         ListNode cur1 = head == head1 ? head1 : head2;
+        //变量cur2 为 head2
         ListNode cur2 = head == head1 ? head2 : head1;
-        ListNode pre = null;
-        ListNode next = null;
+        ListNode pre = null;//当前节点的前一个节点
+        ListNode next = null;//当前节点的下一个节点
         while (cur1!=null && cur2!=null){
-            if(cur1.value<=cur2.value){
+            if(cur1.value<=cur2.value){//当cur1的值小于cur2的值时,将pre设置为当前节点，当前节点设置为当前节点的下一个节点
                 pre = cur1;
                 cur1 = cur1.next;
-            }else{
+            }else{//当cur1的值大于cur2时，
+                /**
+                 * 逻辑总结：将cur2节点设置为pre的下一节点，
+                 * cur1节点设置为cur2的下一节点
+                 * next 设置为cur2的下一节点
+                 * pre的下一节点为cur2
+                 * cur2的下一节点为cur1
+                 * pre 设置为cur2
+                 * cur2 设置为 cur2的下一节点
+                 */
                 next = cur2.next;
                 pre.next = cur2;
                 cur2.next = cur1;
