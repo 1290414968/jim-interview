@@ -14,10 +14,10 @@ public class P1 {
         ListNode pre = null; //当前节点的前一个节点对象
         ListNode next = null; //当前节点的下一个节点对象
         while (headNode!=null){
-            next = headNode.next;
-            headNode.next = pre;
-            pre = headNode;
-            headNode = next;
+            next = headNode.next;//next赋值为head的下一个
+            headNode.next = pre;//head的下一个为pre
+            pre = headNode;//pre赋值为当前节点
+            headNode = next;//head为下一个，继续循环
         }
         return pre;
     }
