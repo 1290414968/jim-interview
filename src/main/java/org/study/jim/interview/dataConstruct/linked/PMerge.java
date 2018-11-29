@@ -3,7 +3,7 @@ package org.study.jim.interview.dataConstruct.linked;
  * @Auther: jim
  * @Date: 2018/11/25 16:15
  */
-public class P2 {
+public class PMerge {
     /**
      * 递归的方式去合并
      * @param firstHeadNode

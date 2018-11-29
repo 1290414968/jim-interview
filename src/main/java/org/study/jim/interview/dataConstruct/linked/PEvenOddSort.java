@@ -10,7 +10,7 @@ import java.util.List;
  * 链表结构如下：1 8 3 6 5 4 7 2 9
  * 进行排序
  */
-public class P3 {
+public class PEvenOddSort {
     /**
      * 实现步骤：
      * 1、根据奇偶数进行拆分成两个链表
